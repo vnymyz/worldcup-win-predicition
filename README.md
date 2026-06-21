@@ -100,9 +100,10 @@ Tiap notebook (`01`–`05`) sudah punya cell setup otomatis untuk Colab — tida
 5. Jalankan **cell pertama** (Setup Colab) — ini otomatis clone seluruh repo dan pindah ke folder kerja yang benar
 6. Lanjut jalankan cell-cell berikutnya seperti biasa
 
-**Untuk pindah ke notebook lain** (02, 03, 04, 05) tanpa ulang proses Open from GitHub:
-- Klik ikon folder 📁 di sidebar kiri Colab
-- Masuk ke folder `worldcup-win-predicition/notebooks/`
-- Double-click notebook yang ingin dibuka — akan terbuka di tab baru
+**Untuk pindah ke notebook lain** (02, 03, 04, 05):
+- Ulangi **File → Open notebook → GitHub**
+- Masukkan repo yang sama: `vnymyz/worldcup-win-predicition`
+- Pilih notebook yang ingin dibuka — akan terbuka di tab baru
+- Jalankan lagi cell pertama (Setup Colab) — karena repo sudah pernah di-clone sebelumnya, proses ini jadi lebih cepat (langsung skip clone, cukup pindah folder kerja)
 
 > Catatan: **Streamlit app** (`app/app.py`) tidak dijalankan di Colab — Colab tidak bisa serve web app secara langsung. Jalankan Streamlit app secara lokal di laptop untuk demo.

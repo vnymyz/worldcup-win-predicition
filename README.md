@@ -47,7 +47,8 @@ Mini-Project-Bola/
 │   ├── 01_data_understanding.ipynb # Eksplorasi awal: cek shape, kolom, missing values
 │   ├── 02_data_cleaning.ipynb      # Filter World Cup, buat target W/D/L, feature engineering
 │   ├── 03_eda.ipynb                # Visualisasi & analisis korelasi (win rate, GDP, dst)
-│   └── 04_modeling.ipynb           # Train & evaluasi Logistic Regression + Random Forest
+│   ├── 04_modeling.ipynb           # Train & evaluasi Logistic Regression + Random Forest
+│   └── 05_coba_prediksi.ipynb      # Coba model secara interaktif (input nama tim, lihat hasil + alasan)
 ├── models/
 │   └── model.pkl                   # Model terbaik (otomatis terpilih berdasar akurasi) siap dipakai app
 ├── app/
@@ -73,14 +74,35 @@ Mini-Project-Bola/
 2. **Data Cleaning** — filter, missing values, feature engineering
 3. **EDA** — visualisasi & analisis korelasi GDP vs win rate
 4. **Modeling** — train Logistic Regression & Random Forest, evaluasi model, simpan model dengan akurasi tertinggi
-5. **Streamlit App** — deploy prediksi interaktif
+5. **Coba Prediksi** — input nama tim secara interaktif, lihat hasil prediksi + alasan
+6. **Streamlit App** — deploy prediksi interaktif
 
 ---
 
 ## Cara Menjalankan
+
+### Lokal (Jupyter Notebook)
 
 ```bash
 pip install -r requirements.txt
 jupyter notebook
 streamlit run app/app.py
 ```
+
+### Google Colab
+
+Tiap notebook (`01`–`05`) sudah punya cell setup otomatis untuk Colab — tidak perlu install apapun manual.
+
+1. Buka [Google Colab](https://colab.research.google.com)
+2. **File → Open notebook → GitHub**
+3. Masukkan repo: `vnymyz/worldcup-win-predicition`
+4. Pilih notebook yang ingin dibuka (misal `01_data_understanding.ipynb`)
+5. Jalankan **cell pertama** (Setup Colab) — ini otomatis clone seluruh repo dan pindah ke folder kerja yang benar
+6. Lanjut jalankan cell-cell berikutnya seperti biasa
+
+**Untuk pindah ke notebook lain** (02, 03, 04, 05) tanpa ulang proses Open from GitHub:
+- Klik ikon folder 📁 di sidebar kiri Colab
+- Masuk ke folder `worldcup-win-predicition/notebooks/`
+- Double-click notebook yang ingin dibuka — akan terbuka di tab baru
+
+> Catatan: **Streamlit app** (`app/app.py`) tidak dijalankan di Colab — Colab tidak bisa serve web app secara langsung. Jalankan Streamlit app secara lokal di laptop untuk demo.
